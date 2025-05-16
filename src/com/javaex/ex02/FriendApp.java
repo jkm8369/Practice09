@@ -11,35 +11,33 @@ public class FriendApp {
     public static void main(String[] args) {
 
     	List<Friend> fList = new ArrayList<Friend>();
-    	Friend friend = new Friend();
+    	
 		
     	Scanner sc = new Scanner(System.in);
     	System.out.println("친구 3명을 등록해주세요");
-    	String friendInfo;
     	
-    	for(int i=0; i<fList.size(); i++) {
-    		friendInfo = sc.nextLine();
-    		Friend f01 = new Friend();
-    		Friend f02 = new Friend();
-    		Friend f03 = new Friend();
+    	
+    	while(true) {
+    		String fInfo = sc.nextLine();
     		
-    		fList.add(f01);
-    		fList.add(f02);
-    		fList.add(f03);
+    		String[] str = fInfo.split(" ");
     		
-    		fList[i] = friendInfo;
+    		Friend friend = new Friend(str[0], str[1], str[2]);
     		
-    		
+    		if(fInfo == null) {
+    			break;
+    		}
+    		fList.add(friend);
     		
     	}
     	
     	for(int i=0; i<fList.size(); i++) {
-    		
+    		System.out.println(fList.get(i).toString());
     	}
     	
 
-    	
     	sc.close();
+    	
     }
 
 }
