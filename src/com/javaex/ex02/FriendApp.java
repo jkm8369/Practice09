@@ -17,22 +17,23 @@ public class FriendApp {
     	System.out.println("친구 3명을 등록해주세요");
     	
     	
-    	while(true) {
+    	for(int i=0; i<3; i++) {
     		String fInfo = sc.nextLine();
     		
     		String[] str = fInfo.split(" ");
     		
     		Friend friend = new Friend(str[0], str[1], str[2]);
     		
-    		if(fInfo == null) {
-    			break;
-    		}
     		fList.add(friend);
-    		
     	}
     	
+    	
+    	
+    	
+    		
+    	
     	for(int i=0; i<fList.size(); i++) {
-    		System.out.println(fList.get(i).toString());
+    		fList.get(i).showInfo();
     	}
     	
 
