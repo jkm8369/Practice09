@@ -1,6 +1,6 @@
 package com.javaex.ex04;
 
-public class RectTriangle extends Shape{
+public class RectTriangle extends Shape {
 	
     private double width;
     private double height;

@@ -1,10 +1,14 @@
 package com.javaex.ex04;
 
 public abstract class Shape {
-    protected double width;
-    protected double height;
-	private int countSides;
 	
+    private int countSides;
+
+    public Shape() {
+    	
+    }
+    
+
 	public Shape(int countSides) {
 		this.countSides = countSides;
 	}

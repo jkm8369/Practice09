@@ -39,8 +39,8 @@ public class RecListApp {
 			rList.get(i).draw();
 		}
 		
-		double sum = 0;
 		System.out.println("#모든 사각형의 넓이 합 출력===========================");
+		double sum = 0;
 		
 		for(int i=0; i<rList.size(); i++) {
 			sum = sum + rList.get(i).area();
